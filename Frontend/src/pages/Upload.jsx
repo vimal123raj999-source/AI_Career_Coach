@@ -162,7 +162,7 @@ export default function UploadResume() {
 
       // 90s timeout — Gemini AI analysis can take up to 35s on first attempt
       const analyzeRes = await axios.post(
-        "https://ai-career-coach-1-ypaw.onrender.com/api/resume/analyze",
+        "https://ai-career-coach-agxn.onrender.com/api/resume/analyze",
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },
