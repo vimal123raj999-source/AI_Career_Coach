@@ -65,7 +65,7 @@ Resume:
 
     # Configurable list of Gemini models to attempt. Users can override via GEMINI_MODELS env var.
     # Updated to use the latest Gemini model version as older models may be deprecated.
-    models_to_try = os.getenv("GEMINI_MODELS", "gemini-3.6-flash").split(",")
+    models_to_try = os.getenv("GEMINI_MODELS", "gemini-3.6-flash,gemini-3.5-pro").split(",")
     models_to_try = [m.strip() for m in models_to_try if m.strip()]
     last_error = None
 
