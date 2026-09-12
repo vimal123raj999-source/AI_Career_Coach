@@ -162,7 +162,7 @@ export default function UploadResume() {
 
       // 90s timeout — Gemini AI analysis can take up to 35s on first attempt
       const analyzeRes = await axios.post(
-        "http://127.0.0.1:8000/api/resume/analyze",
+        "https://ai-career-coach-1-ypaw.onrender.com/api/resume/analyze",
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },
@@ -288,9 +288,8 @@ export default function UploadResume() {
             onDragLeave={() => setDragOver(false)}
             onDrop={handleDrop}
             onClick={openFilePicker}
-            className={`drop-zone p-8 sm:p-12 md:p-16 flex flex-col items-center justify-center relative backdrop-blur-2xl w-full ${
-              dragOver ? "drag-over" : ""
-            }`}
+            className={`drop-zone p-8 sm:p-12 md:p-16 flex flex-col items-center justify-center relative backdrop-blur-2xl w-full ${dragOver ? "drag-over" : ""
+              }`}
           >
             <input
               ref={fileInputRef}
